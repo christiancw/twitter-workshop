@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/christiancw/twitter-workshop#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "lodash": "^4.17.4",
     "nodemon": "^1.11.0",
     "nunjucks": "^3.0.0"
   }
