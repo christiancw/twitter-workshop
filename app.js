@@ -2,6 +2,11 @@ const express = require( 'express' );
 const nunJ = require('nunjucks');
 const routes = require('./routes')
 const app = express();
+const bodyParser = require('body-parser')
+const socketio = require('socket.io')
+
+// var server = app.listen(3000);
+// var io = socketio.listen(server);
 
 // app.get('/', function(req, res){
 //   console.log('GET' + req.path);
@@ -14,16 +19,6 @@ nunJ.configure('views', {noCache : true}); // point nunjucks to the proper direc
 app.use('/', routes);
 app.use(express.static('public'));
 
-
-
-var locals = {
-  title: 'An Example',
-  people: [
-      { name: 'Gandalf'},
-      { name: 'Frodo' },
-      { name: 'Hermione'}
-    ]
-};
 
 
 var server = app.listen(3000);
